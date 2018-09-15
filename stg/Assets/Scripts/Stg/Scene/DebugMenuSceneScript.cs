@@ -85,7 +85,8 @@ public class DebugMenuSceneScript : MonoBehaviour
                 switch (i)
                 {
                     case 0:
-
+                        MhCommon.Print("DebugMenuSceneScript::OnClick GameMainScene");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("GameMainScene");
                         break;
                     case 1:
                         break;
