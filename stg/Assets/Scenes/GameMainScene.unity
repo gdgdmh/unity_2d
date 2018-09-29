@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &129691321
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.1372185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.1624167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028730353133052, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 135c41740d5530b47ad375e47c0d41da, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &525653950
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747775437
 GameObject:
@@ -264,6 +306,7 @@ GameObject:
   - component: {fileID: 1747775438}
   - component: {fileID: 1747775441}
   - component: {fileID: 1747775442}
+  - component: {fileID: 1747775443}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -321,8 +364,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -56414843
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300038, guid: bf3bdd2147b394bc2b771f2556f0b49d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -346,7 +389,7 @@ Transform:
   m_LocalScale: {x: 1.24875, y: 1.24875, z: 1.24875}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1747775441
 MonoBehaviour:
@@ -359,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154123be273938143ac27f328886fc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed_: 5
 --- !u!50 &1747775442
 Rigidbody2D:
   serializedVersion: 4
@@ -379,6 +423,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1747775443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747775437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f460230b4262064884ac5ab812a6372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 5
+  shot_delay_: 0.5
+  bullet_: {fileID: 1383006664001462, guid: eed4237981ac63243a70163edf46f5ff, type: 2}
 --- !u!1 &2096980410
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +524,7 @@ RectTransform:
   m_LocalScale: {x: 1.24875, y: 1.24875, z: 1.24875}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
