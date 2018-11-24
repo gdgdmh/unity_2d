@@ -20,7 +20,8 @@ public class Explosion : MonoBehaviour
 	
 	void Die()
 	{
+        // エラーが出るのでコメントアウト
 		//Re-add the explosion to the pool
-		ObjectPool.current.PoolObject (gameObject);
+		//ObjectPool.current.PoolObject (gameObject);
 	}
 }

@@ -9,9 +9,15 @@ public class StgSpaceship : MonoBehaviour {
     public float speed_; // 移動スピード
     public float shot_delay_; // 弾を撃つ間隔
     public GameObject bullet_; // 弾のPrefab
+    public bool can_shot_; // 弾を撃つかどうか
+    public GameObject explosion;
 
     public void Shot(Transform origin) {
         Instantiate(bullet_, origin.position, origin.rotation);
+    }
+
+    public void Explosion() {
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 
     // 機体の移動

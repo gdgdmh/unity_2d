@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour {
 
     public int kSpeed = 10;
+    public int lifeTime = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,8 @@ public class PlayerBullet : MonoBehaviour {
 	void Update () {
         // 上方向のベクトルを代入
         GetComponent<Rigidbody2D>().velocity = transform.up.normalized * kSpeed;
+        // 出っぱなしだとまずいのでlifeTime秒後に消える
+        Destroy(gameObject, lifeTime);
 		
 	}
 
