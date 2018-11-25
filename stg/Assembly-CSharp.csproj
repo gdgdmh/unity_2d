@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Stg\Game\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Stg\Game\StgBackGround.cs" />
     <Compile Include="Assets\Scripts\Stg\Game\StgDestroyArea.cs" />
+    <Compile Include="Assets\Scripts\Stg\Game\StgEmitter.cs" />
     <Compile Include="Assets\Scripts\Stg\Game\StgExplosion.cs" />
     <Compile Include="Assets\Scripts\Stg\Game\StgSpaceship.cs" />
     <Compile Include="Assets\Scripts\Stg\Scene\DebugMenuSceneScript.cs" />
